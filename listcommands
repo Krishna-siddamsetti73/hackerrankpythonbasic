@@ -1,0 +1,25 @@
+if __name__ == '__main__':
+    N = int(input())
+    l=[]
+    for _ in range(N):
+       com, *x= input().split()
+       val=list(map(int,x))
+       co=str(com)
+       if co == "insert":
+           l.insert(val[0],val[1])
+       elif co == "print":
+           print(l)
+       elif co=="remove":
+            l.remove(val[0])
+       elif co=="append":
+            l.append(val[0])
+       elif co=="sort":
+            l.sort()
+       elif co=="pop":
+            l.pop()
+       else:
+            l.reverse()
+        
+       
+   
+       

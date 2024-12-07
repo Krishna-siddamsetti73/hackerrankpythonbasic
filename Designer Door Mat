@@ -1,0 +1,17 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+N,M =map(int, input().split(' '))
+nt='.|.'
+
+if N%2 != 0:
+    if (M==3*N):
+        n=int(N/2)
+        for i in range(1,n+1):
+            k=i+(i-1)
+            print((nt*k).center(M,'-'))
+        print(('WELCOME').center(M,'-'))
+        x=((n-1)*2)+1
+        for i in range(1,n+1):
+            
+            print((nt*x).center(M,'-'))
+            x =x-2
+            

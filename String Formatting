@@ -1,0 +1,15 @@
+def print_formatted(n):
+      width = len(bin(n)) - 2  # Subtract 2 to remove the "0b" prefix
+      for i in range(1, n + 1):
+        # Convert the number to decimal, octal, hexadecimal, and binary
+         decimal_value = str(i).rjust(width)
+         octal_value = oct(i)[2:].rjust(width)
+         hex_value = hex(i)[2:].upper().rjust(width)
+         binary_value = bin(i)[2:].rjust(width)
+        
+        # Print all values space-separated
+         print(decimal_value, octal_value, hex_value, binary_value)
+
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)
